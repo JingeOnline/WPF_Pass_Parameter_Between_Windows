@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="8">
+        <StackPanel>
+            <GroupBox Header="FirstName">
+                <TextBox Text="{Binding Person.FirstName}"/>
+            </GroupBox>
+            <GroupBox Header="LastName">
+                <TextBox Text="{Binding Person.LastName}"/>
+            </GroupBox>
+            <GroupBox Header="Profile">
+                <StackPanel>
+                    <TextBlock Text="{Binding Person.Gender}"/>
+                    <TextBlock Text="{Binding Person.Age}"/>
+                    <TextBlock Text="{Binding Person.Email}"/>
+                    <TextBlock Text="{Binding Person.Phone}"/>
+                </StackPanel>
+            </GroupBox>
+            <Button Content="Modify Profile" Margin="8" HorizontalAlignment="Right" Width="100"
+                    x:Name="ButtonModifyProfile" Click="ButtonModifyProfile_Click" />
+            <Button Content="Age+" Name="ButtonTest" Click="ButtonTest_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
